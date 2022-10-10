@@ -6,11 +6,11 @@ Rápida descrição do objetivo de fazer esse projeto
 | -------------  | --- |
 | :sparkles: Nome        | **7 Days of Code - Lógica de Programação**
 | :label: Tecnologias | JavaScript
-| :rocket: URL         | https://url-deploy.com.br
-| :fire: Desafio     | https://url-do-desafio.com.br
+| :rocket: URL         | -
+| :fire: Desafio     | -
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![](https://via.placeholder.com/1200x500.png?text=imagem+lindona+do+meu+projeto#vitrinedev)
+![print dia 4](https://user-images.githubusercontent.com/112936700/194901555-eae4f845-080e-4efa-96b1-ff59d8023456.png#vitrinedev)
 
 ## Detalhes do projeto
 
