@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<script>
+
+    alert("Olá! Vamos falar sobre programação?");
+    const nome = prompt("Primeiramente, qual é o seu nome?");
+    var curso = parseInt(prompt("Qual área da programação você gostaria de seguir, " + nome + "? Digite 1 para front-end e 2 para back-end"));
+
+    if (curso == 1) {
+        var frontend = parseInt(prompt ("Dentro de front-end, você prefere 1 - React ou 2 - Vue?"));
+    } else if (curso == 2) {
+        var backend = parseInt(prompt ("Dentro de back-end, você prefere 1 - Java ou 2 - C#?"));
+    } else {
+        alert ("Você não inseriu uma área válida!");
+    }
+
+
+
+    if (frontend == 1 || frontend == 2 || backend == 1 || backend == 2) {
+        var proximoPasso = parseInt(prompt ("Ótima opção! E agora " + nome + ", qual é o seu próximo passo? 1 - Se especializar nessa área ou 2 - Desenvolver suas skills para ser fullstack?"));
+    }
+
+    if (proximoPasso == 1 ) {
+        var especializar = alert ("Muito bem, " + nome + "... Todo especialista tem seu diferencial e o mercado de trabalho procura muito por isso!");
+    } else if (proximoPasso == 2) {
+        var fullstack = alert ("Gostei de saber disso, " + nome + "... Qual empresa não gostaria de um fullstack no seu time, não é?");
+    }
+    else {
+        alert ("Você não inseriu uma área válida!");
+    }
+
+
+
+    var tecnologiasParaAprender = prompt ("Agora me diz uma coisa: Tem mais alguma tecnologia que você gostaria de aprender? Digite 'SIM' ou 'NÃO':");
+
+ /*   var sim = true;
+    var nao = false;*/
+
+    while (tecnologiasParaAprender === "sim") {
+        var qualTecnologia = prompt("Me diz qual é:");
+        var tecnologiasParaAprender = prompt ("Legal! Ótima escolha... Tem mais alguma?");
+    }
+
+    var acabou = alert ("Gostei muito de saber, " + nome);
+
+
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<script>
+
+   var numeroDaMaquina = Math.round (Math.random () * 10);
+   //console.log(numeroDaMaquina);
+   var comeca = alert ("Vamos jogar? Pensei em um número entre 0 e 10 e você precisa adivinhar qual é. Pronto?");
+   var chute = "";
+   var acertou = false;
+
+    for (tentativa = 0; tentativa < 3; tentativa++) {
+        chute = parseInt (prompt("Você tem três chances. Escreva aqui o seu chute:"));
+        if (chute == numeroDaMaquina) {
+            alert ("Parabéns! Eu pensei mesmo no número " + numeroDaMaquina);
+            acertou = true;
+            break;
+    }
+        alert ("Que pena, você errou...");
+   }
+
+   if (!acertou) {
+    alert ("Ahhhhhh... Suas tentativas acabaram e você não conseguiu acertar. O número pensado era " + numeroDaMaquina);
+   }
+
+</script>
+
+</html>

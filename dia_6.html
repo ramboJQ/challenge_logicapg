@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<script>
+
+   let itemInserido = "";
+   let categoria = "";
+   let remover = "";
+   let mercearia = [];
+   let fiambreria = [];
+   let frutasVerduras = [];
+   let higieneLimpeza = [];
+   let congelados = [];
+   let padaria = [];
+   let acougue = [];
+
+   let novoItem = "sim"; // valor inicial é sim pq primeira vez sempre entra no while
+
+   while (novoItem != "não") {
+    if (mercearia.length === 0 && fiambreria === 0 && frutasVerduras === 0 && higieneLimpeza === 0 && congelados === 0 && padaria === 0 && acougue === 0) {
+        novoItem = prompt ("Você deseja adicionar algum item na sua lista de compras? Responda 'sim' ou 'não':");
+    } else {
+        novoItem = prompt ("Você deseja adicionar ou remover algum item na sua lista de compras? Responda 'sim', 'não' ou 'remover':");
+    }
+
+    while (novoItem != "sim" && novoItem != "não" && novoItem != "remover") { //enquanto frase do usuário for diferente de sim não e remover, alerta que não foi reconhecido e pergunta outra vez
+        alert ("Desculpe, não compreendi."); 
+    }
+
+        if (novoItem === "não") {
+            break;
+        }
+
+    if (novoItem === "sim") {
+        itemInserido = prompt ("Insira o item abaixo:");
+        categoria = prompt ("Em qual categoria ele se encaixa? mercearia, fiambreria, frutas e verduras, higiene e limpeza, congelados, padaria ou açougue?");
+
+    if (categoria === "mercearia") {
+        mercearia.push (itemInserido);
+    } else if (categoria === "fiambreria") {
+        fiambreria.push (itemInserido);
+    } else if (categoria === "frutas e verduras") {
+        frutasVerduras.push (itemInserido);
+    } else if (categoria === "higiene e limpeza") {
+        higieneLimpeza.push (itemInserido);
+    } else if (categoria === "congelados") {
+        congelados.push (itemInserido);
+    } else if (categoria === "padaria") {
+        padaria.push (itemInserido);
+    } else if (categoria === "açougue") {
+        acougue.push (itemInserido);
+    } else {
+        alert ("Essa categoria não está disponível.");
+    }
+    }   else if (novoItem === "remover") {
+        if (mercearia.length === 0 && fiambreria === 0 && frutasVerduras === 0 && higieneLimpeza === 0 && congelados === 0 && padaria === 0 && acougue === 0) {
+            alert ("Sua lista ainda está vazia.");
+    }   else {
+            remover = prompt ("Qual dos itens abaixo você gostaria de remover? " + mercearia + fiambreria + frutasVerduras + higieneLimpeza + congelados + padaria + acougue);
+        
+        if (mercearia.indexOf (remover) != -1) {
+        mercearia.splice (mercearia.indexOf (remover), 1);
+        alert ("O item " + remover + " foi removido com sucesso!");
+        }
+
+        if (fiambreria.indexOf (remover) != -1) {
+            fiambreria.splice (fiambreria.indexOf (remover), 1);
+            alert ("O item " + remover + " foi removido com sucesso!");
+        }
+
+        if (frutasVerduras.indexOf (remover) != -1) {
+            frutasVerduras.splice (frutasVerduras.indexOf (remover), 1);
+            alert ("O item " + remover + " foi removido com sucesso!");
+        }
+
+        if (higieneLimpeza.indexOf (remover) != -1) {
+            higieneLimpeza.splice (higieneLimpeza.indexOf (remover), 1);
+            alert ("O item " + remover + " foi removido com sucesso!");
+        }
+
+        if (congelados.indexOf (remover) != -1) {
+            congelados.splice (congelados.indexOf (remover), 1);
+            alert ("O item " + remover + " foi removido com sucesso!");
+        }
+
+        if (padaria.indexOf (remover) != -1) {
+            padaria.splice (padaria.indexOf (remover), 1);
+            alert ("O item " + remover + " foi removido com sucesso!");
+        }
+
+        if (acougue.indexOf (remover) != -1) {
+            acougue.splice (acougue.indexOf (remover), 1);
+            alert ("O item " + remover + " foi removido com sucesso!");
+        } else {
+            alert ("Esse item não foi encontrado na sua lista.");
+        }
+    }
+    }
+    }
+
+    alert ("Sua lista de compras é a seguir:<br><br><br> Mercearia: <br>" + mercearia + "<br>Fiambreria: <br>" + fiambreria + "<br>Frutas e verduras: <br>" + frutasVerduras + "<br>Higiene e limpeza: <br>" + higieneLimpeza + "<br>Congelados: <br>" + congelados + "<br>Padaria: <br>" + padaria + "<br>Açougue: <br>" + acougue);
+    
+</script>
+
+</html>

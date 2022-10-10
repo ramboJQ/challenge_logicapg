@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<script>
+
+   let itemInserido = "";
+   let categoria = "";
+   let mercearia = [];
+   let fiambreria = [];
+   let frutasVerduras = [];
+   let higieneLimpeza = [];
+   let congelados = [];
+   let padaria = [];
+   let acougue = [];
+
+   let novoItem = "sim"; // valor inicial é sim pq primeira vez sempre entra no while
+
+   while (novoItem != "não") {
+    novoItem = prompt ("Você deseja adicionar algum item na sua lista de compras? Responda 'sim' ou 'não':");
+    while (novoItem != "sim" && novoItem != "não") { //enquanto frase do usuário fo diferente de sim e não, alerta que não foi reconhecido e pergunta outra vez
+        alert ("Desculpe, não compreendi.");
+        novoItem = prompt ("Você deseja adicionar algum item na sua lista de compras? Responda 'sim' ou 'não':");
+    }
+
+    if (novoItem == "não") {
+        break;
+    }
+
+    itemInserido = prompt ("Insira o item abaixo:");
+    categoria = prompt ("Em qual categoria ele se encaixa? mercearia, fiambreria, frutas e verduras, higiene e limpeza, congelados, padaria ou açougue?");
+
+    if (categoria == "mercearia") {
+        mercearia.push (itemInserido);
+    } else if (categoria == "fiambreria") {
+        fiambreria.push (itemInserido);
+    } else if (categoria == "frutas e verduras") {
+        frutasVerduras.push (itemInserido);
+    } else if (categoria == "higiene e limpeza") {
+        higieneLimpeza.push (itemInserido);
+    } else if (categoria == "congelados") {
+        congelados.push (itemInserido);
+    } else if (categoria == "padaria") {
+        padaria.push (itemInserido);
+    } else if (categoria == "açougue") {
+        acougue.push (itemInserido);
+    } else {
+        alert ("Essa categoria não está disponível.");
+    }
+    }
+
+    document.write ("Sua lista de compras é a seguir:<br><br><br> Mercearia: <br>" + mercearia + "<br>Fiambreria: <br>" + fiambreria + "<br>Frutas e verduras: <br>" + frutasVerduras + "<br>Higiene e limpeza: <br>" + higieneLimpeza + "<br>Congelados: <br>" + congelados + "<br>Padaria: <br>" + padaria + "<br>Açougue: <br>" + acougue);
+    
+</script>
+
+</html>
